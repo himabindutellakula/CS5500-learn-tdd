@@ -49,7 +49,7 @@ should be placed in `tests/authorService.test.ts`.
 
 Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
 
-
+One significant limitation of `tests/authorSchema.test.ts` is its heavy reliance on mocking Mongoose functions like `countDocuments`, `find`, and `findOne`. While mocking is useful for simulating database operations, it doesn’t test how the schema interacts with a real database or how the application behaves when querying actual data. As a result, critical bugs or edge cases could go unnoticed—issues that may only surface when real queries are executed against an actual database. This reliance on mocks can lead to incomplete test coverage and potentially unreliable test results.
 
 ## Part 3
 
